@@ -2,7 +2,8 @@ import streamlit as st
 import google.generativeai as genai 
 from streamlit_mic_recorder import speech_to_text
 
-genai.configure(api_key="TU-CLAVE-AQUI")
+import os
+genai.configure(api_key=os.getenv("TU-CLAVE-AQUI"))
 modelo=genai.GenerativeModel("gemini-3.6-flash")
 
 st.title("BlackPink IA")
